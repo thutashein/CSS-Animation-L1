@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Transform Basic</title>
+</head>
+<style type="text/css">
+    .container {
+        width: 960px;
+    }
+
+    .container .move {
+        width: 150px;
+        height: 60px;
+        background-color: red;
+        color: #fff;
+        font-size: 20px;
+        padding: 10px 15px;
+        margin: 2rem;
+        line-height: 60px;
+        text-align: center;
+
+        border-radius: 0.5rem;
+
+    }
+
+    #scale:hover {
+        transform: scale(2);
+    }
+
+    #translate:hover {
+        /* transform: translate(200px, 0); */
+        /* transform: translate(0,-100px); */
+        /* transform:translateX(100px); */
+        /* transform: translateY(-100px); */
+    }
+
+    #rotate:hover {
+        transform: rotate(40deg);
+    }
+
+    #skew:hover {
+        transform: skew(10deg);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="scale" class="move">Scale Me</div>
+
+        <div id="translate" class="move">Translate Me</div>
+
+        <div id="rotate" class="move">Rotate Me</div>
+
+        <div id="skew" class="move">Skew Me</div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
