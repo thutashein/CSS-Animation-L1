@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Background Button Effect</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        background-color: #272727;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        margin: 0;
+        overflow: hidden;
+    }
+
+    a {
+        text-decoration: none;
+        /* background-color: red; */
+        width: 220px;
+        height: 80px;
+
+        font-size: 26px;
+        color: yellow;
+        text-transform: uppercase;
+
+        text-align: center;
+        line-height: 80px;
+
+        position: relative;
+    }
+
+
+
+    a:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: yellow;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+
+        opacity: 0;
+        transform: translateY(-50%);
+
+
+        transition: all 0.3s;
+
+        z-index: -2;
+    }
+
+    a::before {
+        left: 0;
+        box-shadow: -100px 0 0 yellow;
+    }
+
+    a:hover::before {
+        left: 50%;
+
+        box-shadow: -30px 0 0 yellow;
+        /* transform: translateX(-50%) translateY(-50%); */
+        transform: translate(-50%, -50%);
+
+        opacity: 1;
+
+
+    }
+
+
+
+    a:after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: yellow;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+
+        opacity: 0;
+        transform: translateY(-50%);
+
+        transition: all 0.3s;
+
+        z-index: -2;
+    }
+
+
+
+    a::after {
+        right: 0;
+        box-shadow: 100px 0 0 yellow;
+
+    }
+
+    a:hover::after {
+        right: 50%;
+        box-shadow: 30px 0 0 yellow;
+        /* transform: translateX(-50%) translateY(-50%); */
+        transform: translate(50%, -50%);
+
+        opacity: 1;
+
+    }
+
+
+
+
+    span {
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: -1;
+
+        transform: scale(0);
+
+        border-radius: 8px;
+
+        transition: all 0.3s;
+
+
+    }
+
+    a:hover {
+        transition-delay: 0.3s;
+        color: #272727;
+    }
+
+    a:hover span {
+
+        transform: scale(1);
+
+        transition-delay: 0.3s;
+    }
+</style>
+
+<body>
+    <a href="#"><span></span>Hover Me</a>
+</body>
+
+</html>

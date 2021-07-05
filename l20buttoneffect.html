@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Swapping Button Effect</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .btn {
+        background: none;
+        color: tomato;
+        font-size: 45px;
+        padding: 40px 80px;
+        text-transform: uppercase;
+        border: 2px solid tomato;
+        cursor: pointer;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    .btn::before {
+        content: '';
+        width: 100%;
+        height: 0;
+        background-color: tomato;
+
+        position: absolute;
+        /* အောက် က တက် စေချင်ရင် bottom = 0 ပေး */
+        top: 0;
+        left: 0;
+
+        border-radius: 0 0 50% 50%;
+
+        transition: all 0.5s;
+
+        z-index: -1;
+    }
+
+
+    .btn:hover::before {
+        height: 200%;
+
+
+    }
+
+    .btn:hover {
+        color: #fff;
+    }
+</style>
+
+<body>
+    <button class="btn">Button</button>
+</body>
+
+</html>
