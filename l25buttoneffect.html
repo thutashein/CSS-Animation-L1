@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Split Button Effect</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        background: #262626;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: orange;
+
+        font-size: 20px;
+        font-weight: bold;
+
+        letter-spacing: 2px;
+        border: 3px solid orange;
+        padding: 25px 50px;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    a::before,
+    a::after,
+    span::before,
+    span::after {
+
+        content: '';
+        width: 25%;
+        height: 100%;
+        background: orange;
+
+        position: absolute;
+
+        z-index: -1;
+
+
+        transition: all 0.2s;
+    }
+
+
+    a::before {
+        top: 100%;
+        left: 0;
+    }
+
+    a::after {
+        top: -100%;
+        left: 25%;
+
+        transition-delay: all 0.1s;
+    }
+
+    a:hover::before {
+        top: 0;
+        left: 0;
+
+
+
+    }
+
+    a:hover::after {
+        top: 0;
+        left: 25%;
+    }
+
+    a span::before {
+        top: 100%;
+        right: 25%;
+
+        transition-delay: all 0.2s;
+    }
+
+    a span::after {
+        top: -100%;
+        right: 0;
+
+        transition-delay: all 0.3s;
+    }
+
+    a:hover span::before {
+        top: 0;
+        right: 25%;
+    }
+
+    a:hover span::after {
+        top: 0;
+        right: 0;
+    }
+
+    a:hover {
+        color: #000;
+    }
+</style>
+
+<body>
+    <a href="#"><span></span>Hover Me</a>
+</body>
+
+</html>
