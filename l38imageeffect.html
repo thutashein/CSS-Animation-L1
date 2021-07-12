@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Image Effect</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        background: #272727;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+
+
+    .container {
+        width: 450px;
+        height: 300px;
+
+        background: #444;
+        border: 10px solid #fff;
+
+        position: relative;
+
+    }
+
+
+    .container img {
+        width: 100%;
+        transition: all 0.5s;
+    }
+
+
+    .container:hover img {
+        transform: rotate(2turn) scale(0);
+    }
+
+    .container::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: #3881b5;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        opacity: 0;
+
+        transition: all 0.3s;
+    }
+
+
+    .container:hover::before {
+        opacity: 1;
+        transition-delay: 0.5s;
+    }
+
+    .caption {
+        width: 100%;
+        height: 100%;
+        /* background: red; */
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        color: #fff;
+        text-transform: uppercase;
+
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+
+        overflow: hidden;
+    }
+
+
+    .caption h2 {
+        font-size: 17px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+    }
+
+    .caption p {
+        max-width: 80%;
+        text-align: center;
+        align-self: center;
+    }
+
+
+    .caption a {
+        text-decoration: none;
+        color: #fff;
+        background: #000;
+        width: 100px;
+        padding: 15px;
+
+        text-align: center;
+        align-self: center;
+        margin-bottom: 20px;
+
+        transform: translateY(-300px);
+
+        transition: all 0.2s;
+    }
+
+
+    .container:hover a {
+        transform: translate(0);
+        transition-delay: 0.5s;
+    }
+
+    p {
+        transform: translateY(-300px);
+        transition: all 0.2s;
+
+    }
+
+
+    .container:hover p {
+        transform: translateY(0);
+        transition-delay: 0.7s;
+    }
+
+
+    h2 {
+        transform: translateY(-300px);
+        transition: all 0.2s;
+    }
+
+
+    .container:hover h2 {
+        transform: translate(0);
+        transition-delay: 0.9s;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <img src="img/webdep.jpg">
+        <div class="caption">
+            <h2>How Sweet !</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy
+            </p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
