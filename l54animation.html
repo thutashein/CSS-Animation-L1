@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Animation Text Background Effect</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        background: #273c75;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 200px;
+        text-align: center;
+        text-transform: uppercase;
+
+        background-image: url(img/banner.jpg);
+
+        color: transparent;
+
+        --webkit-background-clip: text;
+
+        animation-name: myani;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+
+    @keyframes myani {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 100% 0;
+        }
+    }
+</style>
+
+<body>
+    <h1>css animation</h1>
+</body>
+
+</html>

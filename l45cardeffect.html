@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Double Face Card Effect</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .card {
+        width: 300px;
+        height: 400px;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    .imgbox {
+        width: 100%;
+        height: 100%;
+    }
+
+    .imgbox img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        transition: all 0.5s;
+    }
+
+    .content {
+        width: 80%;
+        height: 100%;
+        background: #fff;
+
+        position: absolute;
+        bottom: -85%;
+        left: 10%;
+
+        text-align: center;
+
+        transition: all 0.5s;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        font-size: 23px;
+    }
+
+    p {
+        width: 80%;
+        margin: auto;
+        font-size: 18px;
+        opacity: 0;
+
+        transition: all 0.5s;
+    }
+
+    a {
+        text-decoration: none;
+        background: #000;
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 15px;
+
+        margin: 15px 0;
+        display: inline-block;
+
+        opacity: 0;
+
+        transition: all 0.5s;
+    }
+
+
+    .card:hover .content {
+        width: 100%;
+        height: 100%;
+
+        bottom: 0;
+        left: 0;
+    }
+
+    .card:hover p {
+        opacity: 1;
+        transition-delay: 0.4s;
+    }
+
+    .card:hover a {
+        opacity: 1;
+        transition-delay: 0.4s;
+    }
+
+    .card:hover img {
+        opacity: 0;
+    }
+</style>
+
+<body>
+    <div class="card">
+        <div class="imgbox">
+            <img src="img/menu.jpg">
+        </div>
+
+        <div class="content">
+            <h3>Today Special</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries
+
+            </p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</body>
+
+</html>

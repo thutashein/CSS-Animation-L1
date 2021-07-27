@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Ringing Effect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style type="text/css">
+    body {
+        background: #212121;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .ringing {
+        width: 100px;
+        height: 100px;
+        color: #fff;
+        font-size: 48px;
+        background: limegreen;
+        border-radius: 50%;
+
+        text-align: center;
+        line-height: 100px;
+
+        position: relative;
+    }
+
+
+    .ringing::before,
+    .ringing::after {
+        content: '';
+        /* background: red; */
+        border-radius: 50%;
+        border: 1px solid limegreen;
+
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        bottom: -20px;
+        right: -20px;
+
+        animation-name: myani;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .ringing::after {
+        animation-delay: 0.5s;
+    }
+
+    @keyframes myani {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(1.2);
+        }
+    }
+</style>
+
+<body>
+    <div class="ringing">
+        <i class="fas fa-phone"></i>
+    </div>
+</body>
+
+</html>

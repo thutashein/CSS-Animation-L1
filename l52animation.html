@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Floating Text Effect</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        background: #20caff;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 90px;
+        letter-spacing: 15px;
+        line-height: 90px;
+        text-transform: uppercase;
+
+        text-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+
+
+        animation-name: myani;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes myani {
+        from {
+            transform: rotate(5deg);
+        }
+
+        to {
+            transform: rotate(-5deg);
+        }
+    }
+</style>
+
+<body>
+    <h1>
+        CSS<br>
+        Animation <br>
+        Project
+    </h1>
+</body>
+
+</html>

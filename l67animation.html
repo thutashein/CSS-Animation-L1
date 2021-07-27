@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Rotating Loading Effect</title>
+</head>
+<style type="text/css">
+    * {
+        perspective: 200px;
+
+    }
+
+    body {
+        height: 100vh;
+        background: #20caff;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+
+
+    .loading {
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border-radius: 10px;
+
+        animation-name: myani;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+    }
+
+    @keyframes myani {
+        0% {
+            transform: rotateX(0deg) rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateX(0deg) rotateY(180deg);
+
+        }
+
+        100% {
+            transform: rotateX(180deg) rotateY(180deg);
+
+        }
+    }
+</style>
+
+<body>
+    <div class="loading"></div>
+</body>
+
+</html>

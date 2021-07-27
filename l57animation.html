@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting Text Animation</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        background-color: #000;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    ul li {
+        color: #484848;
+        list-style-type: none;
+        font-size: 80px;
+
+        letter-spacing: 15px;
+
+        animation-name: myani;
+        animation-duration: 1.4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+    }
+
+    @keyframes myani {
+        0% {
+            color: #484848;
+            text-shadow: none;
+        }
+
+        90% {
+            color: #484848;
+            text-shadow: none;
+        }
+
+        100% {
+            color: #ff0;
+            text-shadow: 0 0 7px red, 0 0 50px tomato;
+        }
+    }
+
+
+    ul li:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    ul li:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    ul li:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    ul li:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    ul li:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+
+    ul li:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+
+    ul li:nth-child(6) {
+        animation-delay: 0.5s;
+    }
+
+    ul li:nth-child(7) {
+        animation-delay: 0.6s;
+    }
+
+    ul li:nth-child(8) {
+        animation-delay: 0.7s;
+    }
+</style>
+
+<body>
+    <ul>
+        <li>D</li>
+        <li>a</li>
+        <li>t</li>
+        <li>a</li>
+        <li>L</li>
+        <li>a</li>
+        <li>n</li>
+        <li>d</li>
+
+
+    </ul>
+</body>
+
+</html>

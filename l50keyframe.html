@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Keyframe Properties</title>
+</head>
+<style type="text/css">
+    body {
+        margin: 0;
+
+    }
+
+    div {
+        width: 150px;
+        height: 150px;
+        background: red;
+
+        animation-name: myani;
+        animation-duration: 3s;
+
+        animation-fill-mode: forwards;
+
+        animation-delay: 3s;
+    }
+
+    @keyframes myani {
+        0% {
+            transform: translate(0px);
+        }
+
+        50% {
+            transform: translateX(1000px);
+        }
+
+        100% {
+            transform: translateX(1000px) translateY(500px);
+        }
+    }
+</style>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>
