@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Loading Effect</title>
+</head>
+<style type="text/css">
+    body {
+        background: #0b1734;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+
+
+    .container {
+        width: 100px;
+        height: 100px;
+        /* background: #fff; */
+
+        position: relative;
+
+        transform: rotate(45deg);
+
+        animation-name: myani;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    span {
+        width: 50px;
+        height: 50px;
+
+        position: absolute;
+
+        animation-name: myrotate;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    span:nth-child(1) {
+        background: yellow;
+        top: 0;
+        left: 0;
+    }
+
+    span:nth-child(2) {
+        background: green;
+        top: 0;
+        right: 0;
+    }
+
+    span:nth-child(3) {
+        background: red;
+        bottom: 0;
+        left: 0;
+    }
+
+    span:nth-child(4) {
+        background: blue;
+        bottom: 0;
+        right: 0;
+    }
+
+
+    @keyframes myani {
+        0% {
+            width: 100px;
+            height: 100px;
+        }
+
+
+
+
+        50% {
+            width: 150px;
+            height: 150px;
+        }
+
+
+        90% {
+            width: 100px;
+            height: 100px;
+        }
+
+        100% {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+
+    @keyframes myrotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        10% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(90deg);
+        }
+
+        90% {
+            transform: rotate(90deg);
+        }
+
+        100% {
+            transform: rotate(90deg);
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+
+
+    </div>
+</body>
+
+</html>
